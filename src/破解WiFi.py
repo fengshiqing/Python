@@ -28,7 +28,7 @@ def wificonnect(wifiname, password):
         profile.cipher = const.CIPHER_TYPE_CCMP
 
         # 删除所有的wifi文件
-        # ifaces.remove_all_network_profiles()
+        ifaces.remove_all_network_profiles()
         # 设置新的连接文件
         tep_profile = ifaces.add_network_profile(profile)
         # 连接
@@ -45,7 +45,7 @@ def readPwd():
     # 获取wiif名称
     wifiname = entry.get().strip()
 
-    path = r'./wifipwd.txt'
+    path = 'C:\\Users\\kunning\\Documents\\2496.txt'
     file = open(path, 'r')
     while True:
         try:
@@ -72,7 +72,7 @@ root = Tk()
 root.title('wifi破解')
 root.geometry('500x400')
 
-# 标签
+# 标签 ChinaNet-URtt
 label = Label(root, text='输入要破解的WIFI名称：')
 # 定位
 label.grid()
